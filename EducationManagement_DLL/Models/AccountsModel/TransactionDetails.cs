@@ -11,7 +11,6 @@ namespace EducationManagement_DLL.Models.AccountsModel
         public DateTime VoucherDate { get; set; }
         public string? VoucherNo { get; set; }
         public int VoucherTypeID { get; set; }
-
         public int AccountID { get; set; }
         //public decimal? Amount { get; set; }
         public decimal? DebitAmount { get; set; }
@@ -28,5 +27,6 @@ namespace EducationManagement_DLL.Models.AccountsModel
         public InsBranch InstituteBranch { get; set; }
         [ValidateNever]
         public TransactionMaster? TransactionMaster { get; set; }
+
     }
 }
