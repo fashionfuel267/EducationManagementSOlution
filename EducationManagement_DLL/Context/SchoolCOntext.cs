@@ -1,5 +1,7 @@
 ﻿using EducationManagement_DLL.Models;
 using EducationManagement_DLL.Models.AccountsModel;
+using EducationManagement_DLL.Models.Exam_Models;
+using EducationManagement_DLL.Models.WebsiteModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
@@ -99,5 +101,34 @@ namespace EducationManagement_DLL.Context
 
         #endregion
 
+        #region Exam
+        public DbSet<ExamType> ExamTypes { get; set; } = null!;
+        public DbSet<ExamTitle> ExamTitles { get; set; } = null!;
+        public DbSet<MarksEntry> MarksEntries { get; set; } = null!;
+        public DbSet<Grade> Grades { get; set; } = null!;
+       public DbSet<Result> Results { get; set; } = null!;
+        public DbSet<ExamAttendance> ExamAttendances { get; set; } = null!;
+
+
+        #endregion
+
+        #region website
+        public DbSet<PhotoGallery> PhotoGalleries { get; set; } = null!;
+        public DbSet<News> News { get; set; } = null!;
+        public DbSet<MediaCat> MediaCats { get; set; } = null!;
+        public DbSet<Message> Messages   { get; set; } = null!;
+        public DbSet<Room> Room { get; set; } = null!;
+        public DbSet<RulesRegulation> RulesRegulation { get; set; } = null!;
+        public DbSet<MissionVission> MissionVission { get; set; } = null!;
+        public DbSet<VideoGallery> VideoGalleries { get; set; } = null!;
+        public DbSet<SocialMedia> SocialMedia { get; set; } = null!;
+        public DbSet<History> History { get; set; } = null!;
+        public DbSet<Facility> Facility { get; set; } = null!;
+        public DbSet<ClassRoutine> ClassRoutines { get; set; } = null!;
+        public DbSet<BookList> BookLists { get; set; } = null!;
+        public DbSet<Album> Albums { get; set; } = null!;
+        public DbSet<AboutUs> AboutUs { get; set; } = null!;
+        public DbSet<Achievements> Achievements { get; set; } = null!;
+        #endregion
     }
 }

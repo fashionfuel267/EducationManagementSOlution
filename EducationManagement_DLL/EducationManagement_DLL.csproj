@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructures\Base\" />
-    <Folder Include="Infrastructures\Repositories\" />
-    <Folder Include="Models\Exam Models\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>

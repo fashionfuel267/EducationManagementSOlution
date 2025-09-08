@@ -1,0 +1,19 @@
+﻿
+
+using EducationManagement_DLL.Infrastructures.Base;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace  EducationManagement_DLL.Infrastructures.Repositories
+{
+    public interface IAttendance : IGenericRepository<Attendance> { }
+
+
+    public class AttendanceRepo : GenericRepository<Attendance>, IAttendance
+    {
+        public AttendanceRepo(SchoolCOntext context) : base(context) { }
+    }
+}

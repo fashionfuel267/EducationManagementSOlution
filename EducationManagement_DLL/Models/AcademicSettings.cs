@@ -7,10 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
+using EducationManagement_DLL.Infrastructures.Repositories;
+using EducationManagement_DLL.Models.Exam_Models;
 
 namespace EducationManagement_DLL.Models
 {
-   
+    public class Attendance : BaseDTO
+    {
+        public int StudentId { get; set; }
+        public DateTime Date { get; set; }
+        public bool IsPresent { get; set; }
+        [ValidateNever]
+        public StudentBasicInfo Student { get; set; }
+    }
+    public class AdmitCard : BaseDTO
+    {
+
+        public int StudentId { get; set; }
+        public int ExamId { get; set; }
+        public string AdmitCardPath { get; set; }
+
+        public DateTime IssuedDate { get; set; }
+        [ValidateNever]
+        public StudentBasicInfo Student { get; set; }
+        [ValidateNever]
+        public ExamTitle Exam { get; set; }
+    }
     public class AcademicSession : BaseDTO
     {
       //  public int Id { get; set; }
