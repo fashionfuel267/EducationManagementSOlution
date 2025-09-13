@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface ITimetableEntry : IGenericRepository<TimetableEntry> { }
+    public interface ITimetableEntry : IGenericRepository<TimetableEntryRepo> { }
 
 
-    public class TimetableEntryRepo : GenericRepository<TimetableEntry>, ITimetableEntry
+    public class TimetableEntryRepo : GenericRepository<TimetableEntryRepo>, ITimetableEntry
     {
-        public TimetableEntryRepo(SchoolCOntext context) : base(context) { }
+        public TimetableEntryRepo(SchoolContext context) : base(context) { }
     }
 }

@@ -16,6 +16,6 @@ namespace  EducationManagement_DLL.Infrastructures.Repositories
 
     public class ExamRepo : GenericRepository<ExamTitle>, IExam
     {
-        public ExamRepo(SchoolCOntext context) : base(context) { }
+        public ExamRepo(SchoolContext context) : base(context) { }
     }
 }

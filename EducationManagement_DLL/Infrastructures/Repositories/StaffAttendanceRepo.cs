@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IStaffAttendance : IGenericRepository<StaffAttendance> { }
+    public interface IStaffAttendance : IGenericRepository<StaffAttendanceRepo> { }
 
 
-    public class StaffAttendanceRepo : GenericRepository<StaffAttendance>, IStaffAttendance
+    public class StaffAttendanceRepo : GenericRepository<StaffAttendanceRepo>, IStaffAttendance
     {
-        public StaffAttendanceRepo(SchoolCOntext context) : base(context) { }
+        public StaffAttendanceRepo(SchoolContext context) : base(context) { }
     }
 }

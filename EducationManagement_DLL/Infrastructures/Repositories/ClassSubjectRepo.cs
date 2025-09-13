@@ -15,6 +15,6 @@ namespace  EducationManagement_DLL.Infrastructures.Repositories
 
     public class ClassSubjectRepo : GenericRepository<ClassSubjecTeacherIns>, IClassSubject
     {
-        public ClassSubjectRepo(SchoolCOntext context) : base(context) { }
+        public ClassSubjectRepo(SchoolContext context) : base(context) { }
     }
 }

@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface ISubstituteAssignment : IGenericRepository<SubstituteAssignment> { }
+    public interface ISubstituteAssignment : IGenericRepository<SubstituteAssignmentRepo> { }
 
 
-    public class SubstituteAssignmentRepo : GenericRepository<SubstituteAssignment>, ISubstituteAssignment
+    public class SubstituteAssignmentRepo : GenericRepository<SubstituteAssignmentRepo>, ISubstituteAssignment
     {
-        public SubstituteAssignmentRepo(SchoolCOntext context) : base(context) { }
+        public SubstituteAssignmentRepo(SchoolContext context) : base(context) { }
     }
 }

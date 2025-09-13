@@ -16,6 +16,6 @@ namespace  EducationManagement_DLL.Infrastructures.Repositories
 
     public class TransactionRepo : GenericRepository<TransactionMaster>, ITransaction
     {
-        public TransactionRepo(SchoolCOntext context) : base(context) { }
+        public TransactionRepo(SchoolContext context) : base(context) { }
     }
 }

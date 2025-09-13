@@ -1,5 +1,8 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
+using EducationManagement_DLL.Models.Exam_Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IResult : IGenericRepository<Result> { }
+    public interface IResult : IGenericRepository<ResultRepo> { }
 
-    public class ResultRepo : GenericRepository<Result>, IResult
+    public class ResultRepo : GenericRepository<ResultRepo>, IResult
     {
-        public ResultRepo(SchoolCOntext context) : base(context) { }
+        public ResultRepo(SchoolContext context) : base(context) { }
     }
 }

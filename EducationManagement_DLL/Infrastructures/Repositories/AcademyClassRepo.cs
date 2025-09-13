@@ -15,7 +15,7 @@ namespace EducationManagement_DLL.Infrastructures.Repositories
 
     public class AcademyClassRepo : GenericRepository<AcademyClass>, IAcademyClass
     {
-        public AcademyClassRepo(SchoolCOntext context) : base(context) { }
+        public AcademyClassRepo(SchoolContext context) : base(context) { }
     }
     
 }

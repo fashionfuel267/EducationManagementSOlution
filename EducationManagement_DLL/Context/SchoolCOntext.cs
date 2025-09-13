@@ -15,20 +15,20 @@ using System.Threading.Tasks;
 
 namespace EducationManagement_DLL.Context
 {
-    public class DbSchoolContextFactory : IDesignTimeDbContextFactory<SchoolCOntext>
+    public class DbSchoolContextFactory : IDesignTimeDbContextFactory<SchoolContext>
     {
-        public SchoolCOntext CreateDbContext(string[] args)
+        public SchoolContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<SchoolCOntext>();
+            var optionsBuilder = new DbContextOptionsBuilder<SchoolContext>();
             optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;database=dbSchoolSAAS; Trusted_Connection=True;MultipleActiveResultSets=True;trustservercertificate=true;");
 
-            return new SchoolCOntext(optionsBuilder.Options);
+            return new SchoolContext(optionsBuilder.Options);
         }//User id=sa;password=123;
     }
-    public class SchoolCOntext:IdentityDbContext<ApplicationUser>
+    public class SchoolContext:IdentityDbContext<ApplicationUser>
     {
         
-        public SchoolCOntext(DbContextOptions<SchoolCOntext> options) : base(options)
+        public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

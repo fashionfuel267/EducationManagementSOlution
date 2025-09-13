@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface INotice : IGenericRepository<Notice> { }
-    public class NoticeRepo : GenericRepository<Notice>, INotice
+    public interface INotice : IGenericRepository<NoticeRepo> { }
+    public class NoticeRepo : GenericRepository<NoticeRepo>, INotice
     {
-        public NoticeRepo(SchoolCOntext context) : base(context) { }
+        public NoticeRepo(SchoolContext context) : base(context) { }
     }
 }

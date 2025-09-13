@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IMessage : IGenericRepository<Message> { }
-    public class MessageRepo : GenericRepository<Message>, IMessage
+    public interface IMessage : IGenericRepository<MessageRepo> { }
+    public class MessageRepo : GenericRepository<MessageRepo>, IMessage
     {
-        public MessageRepo(SchoolCOntext context) : base(context) { }
+        public MessageRepo(SchoolContext context) : base(context) { }
     }
 }

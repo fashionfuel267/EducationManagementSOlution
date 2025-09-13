@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface ILeaveRequest : IGenericRepository<LeaveRequest> { }
-    public class LeaveRequestRepo : GenericRepository<LeaveRequest>, ILeaveRequest
+    public interface ILeaveRequest : IGenericRepository<LeaveRequestRepo> { }
+    public class LeaveRequestRepo : GenericRepository<LeaveRequestRepo>, ILeaveRequest
     {
-        public LeaveRequestRepo(SchoolCOntext context) : base(context) { }
+        public LeaveRequestRepo(SchoolContext context) : base(context) { }
     }
 }

@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IFeeStructure : IGenericRepository<FeeStructure> { }
-    public class FeeStructureRepo : GenericRepository<FeeStructure>, IFeeStructure
+    public interface IFeeStructure : IGenericRepository<FeeStructureRepo> { }
+    public class FeeStructureRepo : GenericRepository<FeeStructureRepo>, IFeeStructure
     {
-        public FeeStructureRepo(SchoolCOntext context) : base(context) { }
+        public FeeStructureRepo(SchoolContext context) : base(context) { }
     }
 }

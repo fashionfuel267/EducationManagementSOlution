@@ -8,11 +8,11 @@ namespace EducationManagement_DLL.Infrastructures.Base
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly SchoolCOntext _context;
+        private readonly SchoolContext _context;
         private DbSet<T> _dbset;
         
      
-        public GenericRepository(SchoolCOntext context)
+        public GenericRepository(SchoolContext context)
         {
             _context = context;
             _dbset = _context.Set<T>();

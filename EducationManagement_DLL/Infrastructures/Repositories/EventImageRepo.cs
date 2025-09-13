@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IEventImage : IGenericRepository<EventImage> { }
+    public interface IEventImage : IGenericRepository<EventImageRepo> { }
 
 
-    public class EventImageRepo : GenericRepository<EventImage>, IEventImage
+    public class EventImageRepo : GenericRepository<EventImageRepo>, IEventImage
     {
-        public EventImageRepo(SchoolCOntext context) : base(context) { }
+        public EventImageRepo(SchoolContext context) : base(context) { }
     }
 }

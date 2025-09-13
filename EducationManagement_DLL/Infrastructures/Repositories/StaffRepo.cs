@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IStaff : IGenericRepository<Staff> { }
+    public interface IStaff : IGenericRepository<StaffRepo> { }
 
 
-    public class StaffRepo : GenericRepository<Staff>, IStaff
+    public class StaffRepo : GenericRepository<StaffRepo>, IStaff
     {
-        public StaffRepo(SchoolCOntext context) : base(context) { }
+        public StaffRepo(SchoolContext context) : base(context) { }
     }
 }

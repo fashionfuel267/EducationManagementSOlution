@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IHomework : IGenericRepository<Homework> { }
-    public class HomeworkRepo : GenericRepository<Homework>, IHomework
+    public interface IHomework : IGenericRepository<HomeworkRepo> { }
+    public class HomeworkRepo : GenericRepository<HomeworkRepo>, IHomework
     {
-        public HomeworkRepo(SchoolCOntext context) : base(context) { }
+        public HomeworkRepo(SchoolContext context) : base(context) { }
     }
 }

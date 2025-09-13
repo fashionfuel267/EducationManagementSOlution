@@ -15,7 +15,7 @@ namespace  EducationManagement_DLL.Infrastructures.Repositories
 
     public class AdmitCardRepo : GenericRepository<AdmitCard>, IAdmitCard
     {
-        public AdmitCardRepo(SchoolCOntext context) : base(context) { }
+        public AdmitCardRepo(SchoolContext context) : base(context) { }
     }
 
 

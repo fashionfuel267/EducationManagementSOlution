@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IFeedback : IGenericRepository<Feedback> { }
+    public interface IFeedback : IGenericRepository<FeedbackRepo> { }
 
 
-    public class FeedbackRepo : GenericRepository<Feedback>, IFeedback
+    public class FeedbackRepo : GenericRepository<FeedbackRepo>, IFeedback
     {
-        public FeedbackRepo(SchoolCOntext context) : base(context) { }
+        public FeedbackRepo(SchoolContext context) : base(context) { }
     }
 }

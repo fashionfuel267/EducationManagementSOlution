@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EducationManagement_DLL.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20250905162524_website")]
-    partial class website
+    [Migration("20250913063822_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

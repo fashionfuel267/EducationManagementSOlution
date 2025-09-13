@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using EducationManagement_DLL.Context;
+using EducationManagement_DLL.Infrastructures.Base;
 using EducationManagement_DLL.Models;
 using System;
 using System.Collections.Generic;
@@ -8,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface ISchool : IGenericRepository<School> { }
+    public interface ISchool : IGenericRepository<SchoolRepo> { }
 
 
-    public class SchoolRepo : GenericRepository<School>, ISchool
+    public class SchoolRepo : GenericRepository<SchoolRepo>, ISchool
     {
-        public SchoolRepo(SchoolCOntext context) : base(context) { }
+        public SchoolRepo(SchoolContext context) : base(context) { }
     }
     
 }

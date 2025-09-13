@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EducationManagement_DLL.Migrations
 {
-    [DbContext(typeof(SchoolCOntext))]
+    [DbContext(typeof(SchoolContext))]
     [Migration("20250829170225_edit")]
     partial class edit
     {

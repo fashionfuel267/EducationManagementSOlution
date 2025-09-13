@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace  EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IEvent : IGenericRepository<Event> { }
+    public interface IEvent : IGenericRepository<EventRepo> { }
 
 
-    public class EventRepo : GenericRepository<Event>, IEvent
+    public class EventRepo : GenericRepository<EventRepo>, IEvent
     {
-        public EventRepo(SchoolCOntext context) : base(context) { }
+        public EventRepo(SchoolContext context) : base(context) { }
     }
 }

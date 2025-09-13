@@ -16,6 +16,6 @@ namespace  EducationManagement_DLL.Infrastructures.Repositories
 
     public class AttendanceRepo : GenericRepository<Attendance>, IAttendance
     {
-        public AttendanceRepo(SchoolCOntext context) : base(context) { }
+        public AttendanceRepo(SchoolContext context) : base(context) { }
     }
 }

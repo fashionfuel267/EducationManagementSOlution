@@ -16,6 +16,6 @@ namespace  EducationManagement_DLL.Infrastructures.Repositories
 
     public class BranchRepo : GenericRepository<InsBranch>, IBranch
     {
-        public BranchRepo(SchoolCOntext context) : base(context) { }
+        public BranchRepo(SchoolContext context) : base(context) { }
     }
 }
