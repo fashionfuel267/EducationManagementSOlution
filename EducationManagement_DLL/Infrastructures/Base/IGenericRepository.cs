@@ -19,7 +19,7 @@ namespace EducationManagement_DLL.Infrastructures.Base
          Task  Add(T entity);
         Task Add(List<T> entity);
         void Delete(T entity);
-        void DeletebyID(Expression<Func<T, bool>> predicate);
+        Task  DeletebyID(int id);
         void DeleteRange(IEnumerable<T> entitylist);
         void Update(T entity);
     }

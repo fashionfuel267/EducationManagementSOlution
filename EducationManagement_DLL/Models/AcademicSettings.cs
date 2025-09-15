@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Reflection;
 using EducationManagement_DLL.Infrastructures.Repositories;
 using EducationManagement_DLL.Models.Exam_Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EducationManagement_DLL.Models
 {
@@ -107,10 +108,14 @@ namespace EducationManagement_DLL.Models
 
 
     }
+    [Index(nameof(FullName),nameof(ShortName), IsUnique = true)]
     public class AcademyClass : BaseDTO
     {
         //public int Id { get; set; }
-        //public int PrgId { get; set; }
+        [ForeignKey("Program")]
+        public int PrgId { get; set; }
+         
+        
         public string FullName { get; set; }
         public string ShortName { get; set; }
         public int DurationYear { get; set; } = 1;
@@ -124,6 +129,8 @@ namespace EducationManagement_DLL.Models
         public Institute Institute { get; set; }
         [ValidateNever]
         public InsBranch InstituteBranch { get; set; }
+        [ValidateNever]
+        public Program Program { get; set; }
     }
     public class SubjectInfo : BaseDTO
     {

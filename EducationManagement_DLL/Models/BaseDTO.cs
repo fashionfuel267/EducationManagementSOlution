@@ -11,9 +11,9 @@ namespace EducationManagement_DLL.Models
     {
         [Key]
         public int Id { get; set; }
-        public DateTime CreatedDate { get; set; } = DateTime.Now.Date;
+        public DateTime? CreatedDate { get; set; } = DateTime.Now.Date;
         public string? CreatedBy { get; set; }
-        public DateTime UpdatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
         public string? UpdatedBy
         {
             get; set;

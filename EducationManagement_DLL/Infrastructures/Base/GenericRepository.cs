@@ -32,9 +32,9 @@ namespace EducationManagement_DLL.Infrastructures.Base
             _dbset.Remove(entity);
         }
 
-        public void DeletebyID(Expression<Func<T, bool>> predicate)
+        public async Task DeletebyID(int id)
         {
-            var entity = _dbset.Where(predicate).FirstOrDefault();
+            var entity = _dbset.Find(id) ;
             if(entity!=null)
             { 
                 _dbset.Remove(entity); 

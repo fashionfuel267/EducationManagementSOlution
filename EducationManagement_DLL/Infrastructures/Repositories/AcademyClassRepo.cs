@@ -10,12 +10,23 @@ using System.Threading.Tasks;
 
 namespace EducationManagement_DLL.Infrastructures.Repositories
 {
-    public interface IAcademyClass : IGenericRepository<AcademyClass> { }
+    public interface IAcademyClass : IGenericRepository<AcademyClass> {
+
+        List<AcademyClass> GetbyPrg(int prgid);
+    }
 
 
     public class AcademyClassRepo : GenericRepository<AcademyClass>, IAcademyClass
     {
-        public AcademyClassRepo(SchoolContext context) : base(context) { }
+        private readonly SchoolContext  _contex;
+        public AcademyClassRepo(SchoolContext context) : base(context) {
+            _contex = context;
+        }
+
+        public List<AcademyClass> GetbyPrg(int prgid)
+        {
+            return _contex.AcademyClasses.Where(c => c.PrgId == prgid).ToList();
+        }
     }
     
 }

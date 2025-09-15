@@ -17,7 +17,19 @@ namespace EducationManagement_DLL.Infrastructures.Base
 
 
         private IAcademyClass academyClass;
-        public IAcademyClass AcademyClassRepo => academyClass ??= new AcademyClassRepo(context);
+      //  public IAcademyClass AcademyClassRepo => academyClass ??= new AcademyClassRepo(context);
+
+        public IAcademyClass AcademyClassRepo
+        {
+            get
+            {
+                if(academyClass==null)
+                {
+                    academyClass = new AcademyClassRepo(context);
+                }
+                return academyClass;
+            }
+        }
         private IAdmitCard admitCard;
         public IAdmitCard AdmitCardRepo => admitCard ??= new AdmitCardRepo(context);
 
@@ -133,12 +145,12 @@ namespace EducationManagement_DLL.Infrastructures.Base
             {
                 if (context.SaveChanges() > 0)
                 {
-                    modelMessage.Message = $"Successfully Created";
+                    modelMessage.Message = $"Operation Successfull";
                     modelMessage.IsSuccess = true;
                 }
                 else
                 {
-                    modelMessage.Message = $"Failled to create";
+                    modelMessage.Message = $"Operation Failled";
                     modelMessage.IsSuccess = false;
                 }
             }
